@@ -1,6 +1,8 @@
 :root {
 
   --nearwhite: #eee;
+
+  --almostpurple: #6e2d74;
 }
 
 * {
@@ -11,7 +13,7 @@
 
 body {
   background: #a3a3a3;
-  font: 13px Helvetica, Arial, sans-serif;
+  font: 13px Helvetica , Arial , sans-serif;
 }
 
 .headers {
@@ -23,7 +25,7 @@ body {
 }
 
 button {
-  background: #6e2d74;
+  background: var(--almostpurple);
   border: 2px solid var(--nearwhite);
   color: var(--nearwhite);
   cursor: pointer;
@@ -41,7 +43,7 @@ li {
   list-style-type: none;
 }
 
-button:hover , button:focus {
+button:hover, button:focus {
   outline-offset: -6px;
 }
 
@@ -78,6 +80,15 @@ main {
   display: block;
   max-width: 100%;
   width: 100%;
+}
+
+.message-input-container {
+  background-color: rgba(185, 185, 185, 1);
+  border: 3px solid var(--almostpurple);
+  bottom: 2px;
+  left: 0;
+  position: fixed;
+  right: 0;
 }
 
 .messages-container {

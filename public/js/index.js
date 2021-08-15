@@ -38,6 +38,14 @@ testBtn.addEventListener('click', () => {
   console.log('clicou em PING às', date);
 });
 
+testBtn.addEventListener('mouseover', () => {
+  testBtn.innerText = 'Veja no Console';
+});
+
+testBtn.addEventListener('mouseout', () => {
+  testBtn.innerText = 'PING HORÁRIO';
+});
+
 dltBtn.addEventListener('click', () => {
   messagesUl.innerHTML = '';
   socket.emit('deleteAll');
@@ -92,7 +100,7 @@ socket.on('message', (message) => {
 socket.on('newConnection', (nickName) => setNickname(nickName));
 socket.on('setAllUsers', (allUsers) => {
   onlineUsers.innerHTML = '';
-  generateUserList(clientNickName.value);
+  generateUserList(`${clientNickName.value} (Você)`);
   allUsers.forEach((user) => {
     if (user.nickname !== clientNickName.value) generateUserList(user.nickname);
   });
