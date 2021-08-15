@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Webchat</title>
+    <link href="https://avatars.githubusercontent.com/u/51808343?s=200&v=4" type="image/x-icon" rel="icon" />
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+
+  <body>
+    <h1>Projeto Webchat</h1>
+    <header class="headers">
+      <div class="users-container">
+        <h4 class="users-title">Usuários online: </h4>
+        <ul id="online-users"></ul>
+      </div>
+      <div class="nickname-container">
+        <span>Seu apelido é: <input type="text" id="nickname" autocomplete="off"
+            data-testid="nickname-box"></input></span>
+        <button id="nickname-button" data-testid="nickname-button">Mudar Apelido</button>
+      </div>
+    </header>
+    <main>
+      <section class="button-container">
+        <button id="ping-button">PING</button>
+        <button id="reset-button">RESET DB</button>
+      </section>
+      <section class="messages-container">
+        <div class="message-container-title">
+          <h3>Histórico de mensagens</h3>
+        </div>
+        <ul id="messages" class="messages-history"></ul>
+        <section id="typing-message"></section>
+      </section>
+      <section class="send-message-container">
+        <form action="">
+          <input id="message-input" autocomplete="off" placeholder="Escreva sua mensagem" data-testid="message-box" />
+          <button type="button" id="send-button" data-testid="send-button">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+
+</html>

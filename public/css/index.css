@@ -1,0 +1,138 @@
+:root {
+
+  --nearwhite: #eee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #a3a3a3;
+  font: 13px Helvetica, Arial, sans-serif;
+}
+
+.headers {
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5% auto;
+  text-align: center;
+}
+
+button {
+  background: #6e2d74;
+  border: 2px solid var(--nearwhite);
+  color: var(--nearwhite);
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+  margin: 0.5%;
+  outline: 1px solid var(--nearwhite);
+  outline-offset: -1px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  transition: outline-offset 250ms ease;
+}
+
+li {
+  list-style-type: none;
+}
+
+button:hover , button:focus {
+  outline-offset: -6px;
+}
+
+button:not( :hover ) {
+  outline-offset: -1px;
+}
+
+button:active {
+  background: black;
+
+}
+
+div {
+  padding: 5px;
+  width: 20%;
+}
+
+form {
+  background: rgba(185, 185, 185, 0.333);
+  bottom: 0;
+  padding: 3px;
+  width: 100%;
+}
+
+form input {
+  bottom: 0;
+  margin-right: 0.5%;
+  padding: 10px;
+  width: 90%;
+}
+
+main {
+  border: 2px groove black;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+.messages-container {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+.message-container-title {
+  border: 2px groove black;
+  box-shadow: inset 0 0 10px blue;
+  color: var(--nearwhite);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages li {
+  background: var(--nearwhite);
+  border: 1px solid black;
+  margin: 1px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.nickname-container {
+  border: 1px solid black;
+}
+
+#nickname {
+  background: var(--nearwhite);
+  margin: auto;
+  padding: 0.3em;
+}
+
+#online-users {
+  display: table;
+}
+
+#online-users li:before {
+  content: '\2705   ';
+}
+
+.users-container {
+  border: 1px solid black;
+}
+
+.users-title {
+  background: black;
+  color: var(--nearwhite);
+}
